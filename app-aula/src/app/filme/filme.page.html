@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      
+      <ion-row class="ion-align-items-center">
+        <ion-col size="8">
+          Listagem de filmes
+        </ion-col>
+
+        <ion-col size="2" style="text-align: right;">
+          <ion-button routerLink="/estilizacao">
+            Estilização
+          </ion-button>
+        </ion-col>
+
+        <ion-col size="2" style="text-align: right;">
+          <ion-button color="success" routerLink="/exercicioest">
+            Exercício Est.
+          </ion-button>
+        </ion-col>
+
+      </ion-row>
+      
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-grid>
+    
+    <!-- componente utilizado para permitir a alteração da ordem de itens em uma lista -->
+    
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <ion-row>
+    <ion-col size="12">
+      Listagem de filmes que você quer ver ({{ filmesAss.length }}):
+    </ion-col>
+  </ion-row>
+
+  <ion-row *ngFor="let item of filmesAss">
+    <ion-col size="12" >
+      {{ item.titulo }}
+    </ion-col>
+  </ion-row>
+
+</ion-footer>
+

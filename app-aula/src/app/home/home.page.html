@@ -1,0 +1,76 @@
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Aula 2 - páginas, rotas e grid
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- apresentar página de css #container -->
+  <div id="container">
+    
+    <!-- componente button -->
+    <!-- utilize routerLink para implementar a navegação entre páginas -->
+    <ion-button color="primary" routerLink="/grid1">
+      <ion-icon slot="start" name="airplane-outline"></ion-icon>
+      Grid 1
+    </ion-button>
+
+    <ion-button color="success" routerLink="/grid2">
+      <ion-icon slot="end" name="bug-sharp"></ion-icon>
+      Grid 2
+    </ion-button>
+
+    <ion-button color="success" routerLink="/form">
+      <ion-icon slot="end" name="bug-sharp"></ion-icon>
+      Form
+    </ion-button>
+
+    <ion-button color="success" routerLink="/form2">
+      <ion-icon slot="end" name="airplane-outline"></ion-icon>
+      Form2
+    </ion-button>
+
+    <ion-button color="success" routerLink="/ngpage">
+      <ion-icon slot="end" name="airplane-outline"></ion-icon>
+      DIRETIVAS
+    </ion-button>
+
+    <ion-button color="success" routerLink="/filme">
+      <ion-icon slot="end" name="airplane-outline"></ion-icon>
+      FILMES
+    </ion-button>
+
+    <ion-button color="danger" routerLink="/dados">
+      <ion-icon slot="end" name="bug-sharp"></ion-icon>
+      AULA TESTE
+    </ion-button>
+
+    
+    <ion-button color="danger" routerLink="/dados">
+      <ion-icon slot="end" name="bug-sharp"></ion-icon>
+      DADOS
+    </ion-button>
+    
+      
+    <ion-row>
+      <ion-col size ="6">
+        {{ pessoa.idade }}
+      <ion-icon (click)= "acrescentaIdade()" name="add">
+      </ion-icon>
+        <ion-icon (click)="diminuiIdade()" name="remove">
+        </ion-icon>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button color="danger" (click)="addAluno('Lucas', 24, 'axe')">
+          <ion-icon slot="end" name="add"></ion-icon>
+          ADD ALUNO
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>

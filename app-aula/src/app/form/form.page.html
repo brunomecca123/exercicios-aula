@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar>
+    
+<ion-row>
+  <ion-col>
+    <ion-title>Formulário</ion-title>
+  </ion-col>
+</ion-row>
+
+
+<ion-segment>
+  <ion-segment-button value="0">
+    <ion-label> Dados Pessoais </ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="1">
+    <ion-label> Questionário</ion-label>
+  </ion-segment-button>
+</ion-segment>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-item style="margin-bottom: 5px">
+
+      <ion-label position="floating"> Nome </ion-label>
+      <ion-input></ion-input>
+      </ion-item>
+
+    <ion-item style="margin-bottom: 5px">
+      <ion-label position="floating"> Sexo </ion-label>
+
+      <ion-select placeholder="Nenhuma opção selecionada">
+        <ion-select-option [value]="'m'"> Masculino </ion-select-option>
+        <ion-select-option [value]="'f'"> Feminino </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item style="margin-bottom: 5px">
+    </ion-item>
+    <ion-item style="margin-bottom: 5px">
+
+      <ion-label position="floating"> Data Nasc. </ion-label>
+      <ion-input type="date"></ion-input>
+      </ion-item>
+      <ion-item style="margin-bottom: 5px">
+
+        <ion-label position="floating"> RG </ion-label>
+        <ion-input type="placeholder"></ion-input>
+        </ion-item>
+        <ion-item style="margin-bottom: 5px">
+
+          <ion-label position="floating"> CPF </ion-label>
+          <ion-input type="placeholder"></ion-input>
+          </ion-item>
+          <ion-footer>
+            <ion-row>
+              <ion-col>
+                <ion-button (click)="primeiroMetodo ()" expand="full" color="sucess">
+                  SALVAR
+                </ion-button>
+              </ion-col>
+              <ion-row class ="ion-text-right">
+                <ion-col>
+                  <ion-button (click)="segundoMetodo ()" expand="full" color="sucess">
+                   LIMPAR
+                  </ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-row>
+            
+          </ion-footer>
+  </ion-grid>
+
+</ion-content>

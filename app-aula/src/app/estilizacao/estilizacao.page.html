@@ -1,0 +1,90 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>estilizacao</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+
+      <ion-col size="12">
+        <div class="texto">
+          TEXTO 1
+        </div>
+      </ion-col>
+
+      <ion-col size="12">
+        <div class="cl-divs cl-padding">
+          DIV
+        </div>
+      </ion-col>
+
+      <ion-col size="12">
+        <div class="cl-divs cl-margin">
+          DIV
+        </div>
+
+        <div class="cl-absoluto">
+
+        </div>
+
+        <div class="sombra">
+          TESTE SOMBRA
+        </div>
+
+       
+      </ion-col>
+
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <ion-row class="linha-par">
+          <ion-col size="12">
+            LINHA PAR
+          </ion-col>
+        </ion-row>
+      </ion-col>
+
+      <ion-col size="12">
+        <ion-row class="linha-impar">
+          <ion-col size="12">
+            LINHA ÍMPAR
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+
+   
+    <ion-row>
+      <ion-col size="12">
+        <ion-row *ngFor="let item of itens; let ix = index" [ngClass]="ix % 2 == 0? 'linha-par' : 'linha-impar'">
+          <ion-col size="12">
+            {{ item }}
+          </ion-col>
+        </ion-row>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-row class="cl-dir">
+          <ion-col size="6">
+            Direita
+          </ion-col>
+        </ion-row>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-row class="cl-esq">
+          <ion-col size="6">
+            Esquerda
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      
+      
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>
