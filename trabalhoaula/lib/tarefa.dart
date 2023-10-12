@@ -12,4 +12,12 @@ class Tarefa {
       concluida: map['concluida'] == 1,
     );
   }
+  Map<String, dynamic> toMap(){
+    return {
+      'id': id,
+      'descricao': descricao,
+      'concluida': concluida ? 1 : 0,
+      };
+  }
+
   }

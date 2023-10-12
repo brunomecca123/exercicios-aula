@@ -81,10 +81,13 @@ class ListaDeTarefasScreenState extends State<ListaDeTarefasScreen> {
     
   }
 
-  void _removerTarefa(int index) {
-    setState(() {
-      _tarefas.removeAt(index);
-    });
+  void _removerTarefa(int id) async {
+    await dbHelper.deletarTarefa(id);
+    _carregarTarefas();
+    }
+  
+  Future<void> _atualizarTarefa(Tarefa tarefa) async {
+
   }
 
   @override
@@ -104,12 +107,13 @@ class ListaDeTarefasScreenState extends State<ListaDeTarefasScreen> {
                     onChanged: (bool? newValue) {
                       setState(() {
                         _tarefas[index].concluida = newValue ?? false;
+
                      });
                     },
                   ),
                     trailing: IconButton(
                       onPressed: (){
-                      _removerTarefa(index);
+                      _removerTarefa(_tarefas[index].id);
                    },
                     icon: const Icon(Icons.delete)
                     )
